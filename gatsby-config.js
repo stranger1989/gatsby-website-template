@@ -36,5 +36,9 @@ module.exports = {
         exclude: ['node_modules', 'bower_components', '.cache', 'public'],
       },
     },
+    'gatsby-plugin-emotion',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
