@@ -4,34 +4,33 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Gatsby website template
 </h1>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
+1.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
+    cd gatsby-website-template/
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
+2.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    Edit `src/pages/index.tsx` to see your site update in real-time!
+
+3.  **Build code and serve**
+
+    ```shell
+    cd gatsby-website-template/
+    npm run build
+    npm run serve
+    ```
 
 4.  **Learn more**
 
@@ -52,3 +51,20 @@
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+
+## Improve developer experience
+- Typescript
+  - see `/tsconfig.json`
+  - `"strict": true`
+- Eslint
+  - see `/.eslintrc.json`
+- Prettier
+  - see `/.prettierrc.json`
+
+## UI design system
+- Tailwindcss
+> https://tailwindcss.com/docs
+
+## Data & Analytics
+- SEO setting
+- Google tag manager setting
