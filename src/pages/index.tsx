@@ -1,7 +1,9 @@
 /** @jsx jsx */
-import tw, { GlobalStyles } from 'twin.macro';
 import { css, jsx } from '@emotion/react';
+import tw from 'twin.macro';
 import { StaticImage } from 'gatsby-plugin-image';
+import { gtmTrigger } from '../lib/analytics';
+import Layout from '../components/Layout';
 
 const pageStyles = css`
   ${tw`text-gray-800 font-family['-apple-system, Roboto, sans-serif, serif']`}
@@ -67,100 +69,117 @@ const linkText = css`
   ${tw`text-blue-600 hover:text-blue-700`}
 `;
 
+const buttonContainer = css`
+  ${tw`container my-2 p-4`}
+`;
+
+const button = css`
+  ${tw`w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700`}
+`;
+
 export default function IndexPage(): JSX.Element {
+  const buttonClickHandler = () => gtmTrigger('trigger_identifier');
+
   return (
-    <main css={pageStyles}>
-      <title>Home Page</title>
-      <GlobalStyles />
-      <div css={container}>
-        <div css={width}>
-          <div css={backCard}></div>
-          <div css={forwardCard}>
-            <div css={cardContents}>
-              <div>
-                <StaticImage src="../images/logo.svg" alt="logo" />
-              </div>
-              <div css={divider}>
-                <div css={headText}>
-                  <p>
-                    An advanced online playground for Tailwind CSS, including
-                    support for things like:
-                  </p>
-                  <ul css={listBox}>
-                    <li css={listItem}>
-                      <span css={listIcon}>
-                        <svg
-                          css={checkIcon}
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                      <p css={listText}>
-                        Customizing your
-                        <code css={code}>tailwind.config.js</code> file
-                      </p>
-                    </li>
-                    <li css={listItem}>
-                      <span css={listIcon}>
-                        <svg
-                          css={checkIcon}
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                      <p css={listText}>
-                        Extracting classes with
-                        <code css={code}>@apply</code>
-                      </p>
-                    </li>
-                    <li css={listItem}>
-                      <span css={listIcon}>
-                        <svg
-                          css={checkIcon}
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                      <p css={listText}>Code completion with instant preview</p>
-                    </li>
-                  </ul>
-                  <p>
-                    Perfect for learning how the framework works, prototyping a
-                    new idea, or creating a demo to share online.
-                  </p>
+    <Layout title="web site" description="this is page description">
+      <main css={pageStyles}>
+        <div css={container}>
+          <div css={width}>
+            <div css={backCard}></div>
+            <div css={forwardCard}>
+              <div css={cardContents}>
+                <div>
+                  <StaticImage src="../static/images/logo.svg" alt="logo" />
                 </div>
-                <div css={boldText}>
-                  <p>Want to dig deeper into Tailwind?</p>
-                  <p>
-                    <a href="https://tailwindcss.com/docs" css={linkText}>
-                      {' '}
-                      Read the docs &rarr;{' '}
-                    </a>
-                  </p>
+                <div css={divider}>
+                  <div css={headText}>
+                    <p>
+                      An advanced online playground for Tailwind CSS, including
+                      support for things like:
+                    </p>
+                    <ul css={listBox}>
+                      <li css={listItem}>
+                        <span css={listIcon}>
+                          <svg
+                            css={checkIcon}
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <p css={listText}>
+                          Customizing your
+                          <code css={code}>tailwind.config.js</code> file
+                        </p>
+                      </li>
+                      <li css={listItem}>
+                        <span css={listIcon}>
+                          <svg
+                            css={checkIcon}
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <p css={listText}>
+                          Extracting classes with
+                          <code css={code}>@apply</code>
+                        </p>
+                      </li>
+                      <li css={listItem}>
+                        <span css={listIcon}>
+                          <svg
+                            css={checkIcon}
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <p css={listText}>
+                          Code completion with instant preview
+                        </p>
+                      </li>
+                    </ul>
+                    <p>
+                      Perfect for learning how the framework works, prototyping
+                      a new idea, or creating a demo to share online.
+                    </p>
+                  </div>
+                  <div css={boldText}>
+                    <p>Want to dig deeper into Tailwind?</p>
+                    <p>
+                      <a href="https://tailwindcss.com/docs" css={linkText}>
+                        {' '}
+                        Read the docs &rarr;{' '}
+                      </a>
+                    </p>
+                  </div>
+                  <div css={buttonContainer}>
+                    <button css={button} onClick={buttonClickHandler}>
+                      google analytics test trigger
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </Layout>
   );
 }
