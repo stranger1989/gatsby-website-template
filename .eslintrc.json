@@ -26,10 +26,11 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console": "warn",
+        "no-console": 1,
         "react/jsx-uses-react": [
             1
-        ]
+        ],
+        "react/prop-types": 0
     },
     "settings": {
         "react": {
