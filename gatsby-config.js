@@ -46,6 +46,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    'gatsby-plugin-postcss',
     // seo and user analytics
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
