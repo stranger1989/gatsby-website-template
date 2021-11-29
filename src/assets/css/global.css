@@ -8,6 +8,9 @@
   html, body, #___gatsby, #gatsby-focus-wrapper {
     @apply h-full;
   }
+  html {
+    @apply font-original;
+  }
   input, button, textarea, select {
     @apply appearance-none bg-transparent outline-none;
   }

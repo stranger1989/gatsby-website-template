@@ -25,6 +25,19 @@ module.exports = {
         'hover-1': 'var(--hover-1)',
         'hover-2': 'var(--hover-2)',
       },
+      fontFamily: {
+        original: [
+          'Noto Sans JP',
+          'Menlo',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Monaco',
+          'Consolas',
+          'Liberation Mono',
+          'Courier New',
+          'monospace',
+        ],
+      },
       fontSize: {
         advert: 'var(--advert)',
         'slogan-lg': 'var(--slogan-lg)',

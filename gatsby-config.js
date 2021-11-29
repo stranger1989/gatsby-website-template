@@ -47,6 +47,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-postcss',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Noto Sans JP\:100,300,400,500,700,900`],
+        display: 'swap',
+      },
+    },
     // seo and user analytics
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
