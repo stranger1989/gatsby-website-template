@@ -1,0 +1,46 @@
+:root {
+  /* color */
+  --color-main: #445577;
+  --color-main-light: #7383A2;
+  --color-main-dark: #002F6C;
+  --color-accent: #FF6428;
+  --color-accent-light: #FF9678;
+  --color-accent-dark: #C41C00;
+  --color-base-0: #f8f9fa;
+  --color-base-1: #f1f3f5;
+  --color-base-2: #e9ecef;
+  --color-base-3: #dee2e6;
+  --color-base-4: #ced4da;
+  --color-base-5: #adb5bd;
+  --color-base-6: #868e96;
+  --color-base-7: #495057;
+  --color-base-8: #343a40;
+  --color-base-9: #212529;
+  --hover: rgba(0, 0, 0, 0.075);
+  --hover-1: rgba(0, 0, 0, 0.15);
+  --hover-2: rgba(0, 0, 0, 0.25);
+  --hover-3: rgba(0, 0, 0, 0.7);
+
+  /* text size */
+  --advert: 5rem;
+  --slogan-lg: 4.5rem;
+  --slogan-sm: 4rem;
+  --header-lg: 3rem;
+  --header-sm: 2.5rem;
+  --heading-1: 2rem;
+  --heading-2: 1.8rem;
+  --heading-3: 1.4rem;
+  --heading-4: 1.2rem;
+  --heading-5: 1.1rem;
+  --heading-6: 1rem;
+  --body-lg: 1.125rem;
+  --body-md: 1rem;
+  --body-sm: 0.875rem;
+  --caption: 0.75rem;
+  --button-lg: 1rem;
+  --button-md: 0.875rem;
+  --button-sm: 0.75rem;
+
+  /* text leading */
+  --leading-rate: 1.5;
+}
