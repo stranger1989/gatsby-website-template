@@ -24,6 +24,7 @@ module.exports = {
         hover: 'var(--hover)',
         'hover-1': 'var(--hover-1)',
         'hover-2': 'var(--hover-2)',
+        'hover-3': 'var(--hover-3)',
       },
       fontFamily: {
         original: [

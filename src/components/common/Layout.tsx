@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { GlobalStyles } from 'twin.macro';
 
+import '../../assets/css/global.css';
+
 interface LayoutProps {
   children: JSX.Element;
   title?: string;
